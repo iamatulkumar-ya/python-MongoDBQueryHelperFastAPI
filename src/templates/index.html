@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>mongoDB Query Helper</title>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('asset', path='/style.css') }}" /> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('asset', path='/bootstrap.css') }}" /> 
+    <link rel="icon" type="image/x-icon" href="{{ url_for('asset', path='/favicon.ico') }}"">
+    <script src="{{ url_for('js', path='/index.js') }}"></script>
+
+    <style>
+        .form-control{
+
+            display: inline-block !important;
+        }
+
+        .col-md-12{
+
+            padding-left: 0px !important;
+            padding-right: 0px !important; 
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+<div class="header ">
+    <br>
+    <h1> MongoDB Query Helper</h1>
+    <br> 
+</div>
+
+<div class="content ">
+   <form id="connectionFormID " name="connectionForm" class="col-md-12" >
+        <div class="connectionDiv"> 
+            <h4> <u>Connect to Mongo DB  </u>  </h4> <br />
+            <span id="connectionMessage"></span>
+            <br />
+            <div class="form-group col-md-4"> 
+            <label> Connection String: <span class="required">*</span> </label> 
+            <input required class="form-control" type="text" name="connectionString" value="{{connectionString}}" title="mention the connection string" />
+            </div>
+            <div class="form-group col-md-4"> 
+            <label> Database Name: <span class="required">*</span> </label> 
+            <input required class="form-control" type="text" name="dbName" value="{{dbName}}" title="mention the database name" />
+            </div>
+            <div class="form-group col-md-4"> 
+            <label> Collection Name: <span class="required">*</span> </label> 
+            <input required class="form-control" type="text" name="collectionName" value="{{collectionName}}" title="mention the collection name" />
+            </div>
+            <div class="form-group col-md-4"> 
+            <button id="connectionBtn" class="form-control col-md-5" type="button" title="connect to mongoDB" onclick="callConnectToMongoDB(connectionForm)"> Connect </button>
+           
+            <button id="resetconnectionBtn" class="form-control col-md-5" type="button" title="connect to mongoDB" onclick="resetConnectToMongoDB()"> Reset </button>
+            </div>
+        </div>
+    </form >
+
+    <hr />
+
+    <div class="queryHelperDiv col-md-12" > 
+        <div class="queryDiv"> 
+            <h4> <u>Query to collection  </u>  </h4> <br />
+    
+            <!-- <div class="form-group col-md-3"> 
+            <label> Connection String: </label> 
+            <input class="form-control" type="text" name="connectionString" value="{{connectionString}}" title="mention the connection string" />
+            </div>
+            <div class="form-group col-md-3"> 
+            <label> Database Name: </label> 
+            <input  class="form-control" type="text" name="dbName" value="{{dbName}}" title="mention the database name" />
+            </div>
+            <div class="form-group col-md-3"> 
+            <label> Collection Name: </label> 
+            <input class="form-control" type="text" name="collectionName" value="{{collectionName}}" title="mention the collection name" />
+            </div>
+            <button class="form-control col-md-2" type="submit" title="connect to mongoDB"> Connect </button>
+        -->
+        </div>
+    
+
+    </div>
+
+</div>
+<br/> <br/>
+<div class="footer ">
+    &copy; 2023, kumaratul.in 
+    <br> <br>
+</div>
+
+
+</body>
+
+
+</html>

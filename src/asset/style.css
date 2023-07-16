@@ -1,0 +1,86 @@
+ 
+
+.header{
+min-width: 100vw;
+max-width: 100vw;
+ 
+background-color: black;
+color:rgb(0, 194, 0);
+text-align: center;
+padding-top: 0.8em;
+font-weight: 800;
+}
+
+
+.content{
+
+min-width: 100vw;
+max-width: 100vw;
+
+
+}
+
+.required{
+    color: red;
+}
+.connectionDiv{
+    min-width: 100vw;
+    max-width: 100vw;
+    padding: 10px;
+    
+
+}
+
+.connectionDiv > label {
+    font-weight: 500;
+ 
+}
+
+.connectionDiv > #connectionMessage{
+    color: red;
+}
+
+.connectionDiv > input { 
+    border-radius: 5px; 
+}
+
+
+#connectionBtn, #resetconnectionBtn{
+    text-decoration: none ;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    /* min-width: 10vw;
+    max-width: 10vw;
+    min-height: 4vh;
+    max-height: 4vh; */
+    background-color:green;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+#resetconnectionBtn{
+    background-color:rgb(194, 181, 1);
+
+}
+
+
+
+.queryDiv{
+    min-width: 100vw;
+    max-width: 100vw;
+    padding: 10px;
+
+}
+
+
+.footer{
+min-width: 100vw;
+max-width: 100vw; 
+background-color: rgb(71, 71, 71);
+color: white;
+text-align: center;
+padding-top: 1em;
+}
+
